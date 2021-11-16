@@ -73,8 +73,12 @@
             $.post("checkuser.php", $("#loginForm").serialize(), function (data) {
                 console.log(data);
                 if (data == '1') {
+                    document.getElementById("Username").style.backgroundColor="";
+                    document.getElementById("Password").style.backgroundColor="";
                     window.location = 'main.php';
                 } else {
+                    document.getElementById("Username").style.backgroundColor="#FFCCCC";
+                    document.getElementById("Password").style.backgroundColor="#FFCCCC";
                     alert('Invalid credentials!!!!!!!!!!');
                 }
             });

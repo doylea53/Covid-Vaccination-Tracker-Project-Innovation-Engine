@@ -5,6 +5,7 @@
 body {
     margin-top: 10px;
     background-image: url("background.jpg");
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -211,6 +212,14 @@ textarea {
 #notes {
     width: 100px;
     height: 10px;
+}
+
+#error {
+    visibility: hidden;
+    font-size: 15px;
+    padding: 4px;
+    margin-top: 3px;
+    background-color: #FFCCCC;
 }
 
 @media screen and (max-width: 1200px) {

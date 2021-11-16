@@ -20,7 +20,7 @@ session_start();
 <nav>
         <ul>
             <li><a href="input.html">Input Data</a></li>
-            <li><a href="retrieve.html">Retrieve Data</a></li>
+            <li><a href="retrieve.php">Retrieve Data</a></li>
             <li><a href="index.html">Log Out</a></li>
             <li><a href="test.html">test</a></li>
         </ul>
@@ -36,7 +36,7 @@ session_start();
     <!-- Container for a FAQ -->
     <div id="faqDiv">
         <p>COVID and HIPAA FAQ</p>
-        <p>__________________________</p>
+        <p>___________________</p>
         <dl>
             <dt><span class="qFirstLetter">Q.</span>What is COVID?</dt>
                 <dd><span class="aFirstLetter">A.</span>Covid (or SARS-CoV-2) is a virus that causes respiratory issues. While most people only get mild symptoms and recover quickly, people with compromised immune systems and the elderly can get severerly ill.</dd>

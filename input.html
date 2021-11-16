@@ -16,7 +16,7 @@
 <nav>
     <ul>
         <li><a href="main.php">Home Page</a></li>
-        <li><a href="retrieve.html">Retrieve Data</a></li>
+        <li><a href="retrieve.php">Retrieve Data</a></li>
         <li><a href="index.html">Log Out</a></li>
         <li><a href="test.html">test</a></li>
     </ul>
@@ -29,6 +29,7 @@
             <div class="labelbox">
                 <label for="fName">First Name</label>
                 <input type="text" id="fName" name="fName">
+                <div id="error"></div>
             </div>
             <div class="labelbox">
                 <label for="mName">Middle Name</label>
@@ -161,7 +162,7 @@
         <form id="vaccInfo">
             
             <div class="labelbox">
-                <label for="vaccine">Vaccine Manufacturer</label>
+                <label for="vaccine" style="font-size: 22px;">Vaccine Manufacturer</label>
                 <!-- Drop down to choose a vaccine -->
                 <select id="vaccine" name="vaccine" class="required">
                     <option disabled selected value> -- select an option -- </option>
@@ -180,7 +181,7 @@
             </div>
             <hr>
             <div class="labelbox">
-                <label for="pih" style="font-size: 20px;">Primary Insurance Holder</label>
+                <label for="pih" style="font-size: 19px;">Primary Insurance Holder</label>
                 <input type="text" id="pih" name="pih">
             </div>
             <div class="labelbox">
@@ -197,7 +198,7 @@
                 <input type="date" id="vDate1" name="vDate1">
             </div>
             <div class="labelbox">
-                <label for="vDate2" style="font-size: 20px">Date of second vaccination</label>
+                <label for="vDate2" style="font-size: 18px">Date of second vaccination</label>
                 <input type="date" id="vDate2" name="vDate2">
             </div>
             <div class="labelbox">
@@ -211,7 +212,7 @@
             </div>
             <hr>
             <div class="labelbox3">
-                <label for="denied">Reasons for refusing the shot, if any</label>
+                <label for="denied">Reasons for refusing the shot?</label>
                 <textarea id="notes" name="denied"  data-ays-ignore="true">
                 </textarea>
             </div>
@@ -323,7 +324,7 @@
                 dobCorrect = true;
             }
 
-            /* Validate patient number checking if it contains any letters or symbols */
+            /* Validate patient number checking if it contains any letters or symbols 
             if ((document.getElementById("patientNumber").value=="") || (!document.getElementById("patientNumber").value.match(numbers))) {
                 var patientNumberCorrect = false;
                 document.getElementById("patientNumber").style.backgroundColor="#FFCCCC";
@@ -333,7 +334,7 @@
                 document.getElementById("patientNumber").style.backgroundColor="";
                 patientNumberCorrect = true;
             }
-
+            */
             /* Validate gender */
             if (document.getElementById("gender").value=="male" || document.getElementById("gender").value=="female" || document.getElementById("gender").value=="other" ) {
                 document.getElementById("gender").style.backgroundColor="";
@@ -507,12 +508,11 @@
 
 
             
-            if (fNameCorrect && mNameCorrect && lNameCorrect && dobCorrect && patientNumberCorrect && genderCorrect && streetCorrect && stateCorrect && vaccineCorrect && zipCorrect && lotCorrect && doseCorrect && pihCorrect && pidCorrect && insurerCorrect && vDate1Correct && vDate2Correct && armCorrect) {
+            if (fNameCorrect && mNameCorrect && lNameCorrect && dobCorrect && genderCorrect && streetCorrect && stateCorrect && vaccineCorrect && zipCorrect && lotCorrect && doseCorrect && pihCorrect && pidCorrect && insurerCorrect && vDate1Correct && vDate2Correct && armCorrect) {
                 $('form').trigger('reinitialize.areYouSure')
             
                 /* do this for all the field entries that we need to put into the system */
-                const username = document.getElementById('Username').value;
-                const password = document.getElementById('Password').value;
+
             
                 $.post("insert.php", $("#loginForm").serialize(), function (data) {
                         window.location.href="test.html";
