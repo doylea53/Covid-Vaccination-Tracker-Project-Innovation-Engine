@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Log in</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+
+    <!-- HTML and Javascript code written by Dan Bartels -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Containter for the log 
+    in form -->
+
+    <div id="loginDiv">
+
+
+        <!-- <form action="checkuser.php" method="POST"> -->
+        <form id="loginForm">
+            <p>Please enter your username and password to proceed.</p>
+            <label for="nameLogin">Username:</label>
+            <input type="text" name="Username" id="Username" required><br>
+
+            <label for="passwordLogin">Password:</label>
+            <input type="password" name="Password" id="Password" required><br>
+            <button name="submit" onclick="return login()">Submit</button>
+            <button type="button" onclick="mainPage()">Main page</button>
+            <button type="button" onclick="inputPage()">input page</button>
+            <!-- Calls the submitLogin function -->
+
+        </form>
+    </div>
+    <script>
+        function mainPage() {
+            document.location = "main.php";
+        }
+
+        function inputPage() {
+            document.location = "input.html";
+        }
+        function login() {
+            const username = document.getElementById('Username').value;
+            const password = document.getElementById('Password').value;
+            // alert(username);
+            // alert(password);
+
+
+            /* NON-JQUERY */
+            // const formData = new FormData();
+            // formData.append('Username', username);
+            // formData.append('Password', password);
+
+            // fetch('checkuser.php', {
+            //     method: 'POST',
+            //     body: formData
+            // })
+            //     .then(response => response.text())
+            //     .then(result => {
+            //         // console.log('Success:', result);
+            //         if (result == '1') {
+            //             window.location = 'main.php';
+            //         } else {
+            //             alert('Invalid credentials!!!!!!!!!!');
+            //         }
+            //     });
+
+            /* JQUERY */
+            $.post("checkuser.php", $("#loginForm").serialize(), function (data) {
+                console.log(data);
+                if (data == '1') {
+                    window.location = 'main.php';
+                } else {
+                    alert('Invalid credentials!!!!!!!!!!');
+                }
+            });
+            
+            return false;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

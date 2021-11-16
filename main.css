@@ -1,0 +1,122 @@
+
+/* CSS code written by Dan Bartels */
+
+body {
+    margin-top: 10px;
+    background-image: url("background.jpg");
+}
+
+nav {
+    background-color: lightgray;
+    overflow: auto;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+}
+
+li a:hover {
+    background-color: grey;
+  }
+
+#choiceDiv {
+    display: block;
+    width: 40%;
+    min-width: 400px;
+    background-color: lightgray;
+    margin: auto;
+    margin-top: 50px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 25px;
+
+ 
+}
+
+#choiceDiv p {
+    font-size: 30px;
+}
+
+#choiceDiv button {
+    margin: 10px;
+    padding: 18px;
+    font-size: 20px;
+    width: 250px;
+}
+
+#faqDiv {
+    display: block;
+    width: 40%;
+    min-width: 400px;
+    font-size: 25px;
+    background-color: lightgray;
+    margin: auto;
+    margin-top: 50px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+#faqDiv p {
+    font-size: 30px;
+}
+
+#faqDiv dt {
+    text-align: left;
+    margin: 10px;
+    font-weight: bold;
+}
+
+#faqDiv dd {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.qFirstLetter {
+    font-size: 50px;
+    color: red;
+    margin-right: 10px;
+}
+
+.aFirstLetter {
+    font-size: 50px;
+    color: #0000FF;
+    margin-right: 10px;
+}
+
+@supports (-moz-appearance:none) {
+    #choiceDiv {
+        min-width: 375px;
+    }
+
+    #faqDiv {
+        min-width: 375px;
+    }
+    
+}
+
+
+_:-ms-lang(x), _:-webkit-full-screen, #choiceDiv {
+    min-width: 310px;
+}
+
+_:-ms-lang(x), _:-webkit-full-screen, #faqDiv {
+    min-width: 310px;
+}

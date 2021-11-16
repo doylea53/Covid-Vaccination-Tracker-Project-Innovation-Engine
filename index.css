@@ -1,0 +1,64 @@
+
+/* CSS code written by Dan Bartels */
+
+body {
+    margin-top: 10px;
+    background-image: url("background.jpg");
+}
+
+#loginDiv {
+    
+    width: 40%;
+    min-width: 400px;
+    font-size: 25px;
+    background-color: lightgray;
+    margin: auto;
+    margin-top: 50px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+#loginDiv label {
+    margin-bottom: 5px;
+}
+
+#loginDiv input {
+    margin-bottom: 10px;
+    height: 20px;
+    
+}
+
+#loginDiv p {
+    font-size: 30px;
+    
+}
+
+#loginDiv button {
+    margin: 10px;
+    padding: 18px;
+    font-size: 20px;
+
+}
+
+@supports (-moz-appearance:none) {
+    #loginDiv {
+    
+        width: 40%;
+        min-width: 375px;
+        font-size: 25px;
+        background-color: lightgray;
+        margin: auto;
+        margin-top: 50px;
+        padding: 15px;
+        text-align: center;
+        border-radius: 25px;
+    }
+    
+}
+
+_:-ms-lang(x), _:-webkit-full-screen, #loginDiv
+{ 
+  min-width: 320px;
+}
+

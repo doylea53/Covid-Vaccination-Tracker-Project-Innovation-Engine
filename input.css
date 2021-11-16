@@ -1,0 +1,272 @@
+
+/* CSS code written by Dan Bartels */
+
+/* Sets up the background image */
+body {
+    margin-top: 10px;
+    background-image: url("background.jpg");
+}
+
+
+nav {
+    background-color: lightgray;
+    overflow: auto;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+}
+
+li a:hover {
+    background-color: grey;
+  }
+
+/* Styles the div used for the form. Also centers content, though may choose to have it center at a different css point */
+#vaccForm {
+    background-color: lightgray;
+    font-size: 25px;
+    width: 40%;
+    min-width: 425px;
+    margin-left: 50px;
+    padding: 15px;
+    margin-top: 50px;
+    border-radius: 25px;
+    text-align: center;
+    float: left;
+    
+}
+
+#vaccForm input {
+    height: 20px;
+    padding: 5px;
+}
+
+#vaccForm select {
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 7px;
+}
+
+#dobChange {
+    display: block;
+    margin: auto;
+}
+
+#vaccForm button {
+    height: 30px;
+}
+
+
+/* Test for second form */
+#vaccForm2 {
+    background-color: lightgray;
+    font-size: 25px;
+    width: 40%;
+    min-width: 425px;
+    margin-right: 50px;
+    padding: 15px;
+    margin-top: 50px;
+    border-radius: 25px;
+    text-align: center;
+    float: right;
+    
+}
+
+#vaccForm2 input {
+    height: 20px;
+    padding: 5px;
+}
+
+#vaccForm2 select {
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 7px;
+}
+
+#vaccForm2 button {
+    height: 30px;
+}
+
+textarea {
+    max-width: 350px;
+    min-width: 350px;
+
+    max-height: 100px;
+    min-height: 75px;
+}
+
+.labelbox {
+    display: inline-block;
+    /*clear: left;*/
+    width: 225px;
+    height: 80px;
+    margin: 5px;
+    background-color: #C0C0C0;
+    padding: 3px;
+    border-radius: 25px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.labelbox2 {
+    display: inline-block;
+    /*clear: left;*/
+    width: 300px;
+    height: 80px;
+    margin: 5px;
+    background-color: #C0C0C0;
+    padding: 3px;
+    border-radius: 25px;
+    text-align: center;
+    vertical-align: top;
+}
+
+#dobChange {
+    display: block;
+}
+
+.labelbox3 {
+    display: inline-block;
+    /*clear: left;*/
+    width: 400px;
+    height: 120px;
+    margin: 5px;
+    background-color: #C0C0C0;
+    padding: 3px;
+    border-radius: 25px;
+    vertical-align: top;
+}
+
+.labelboxTest {
+    display: inline-block; 
+    /*clear: left;*/
+    width: 300px;
+    height: 275px;
+    margin: 5px;
+    background-color: #C0C0C0;
+    padding: 3px;
+    border-radius: 25px;
+    vertical-align: top;
+ }
+
+ .labelboxTest p {
+    margin-top: 0px;
+    margin-bottom: -15px;
+ }
+
+#ethnicity ul {
+    text-align: left;
+    list-style-type: none;
+ }
+
+ #ethnicity ul li {
+    margin-bottom: 5px;
+    font-size: 25px;
+ }
+
+#ethnicity input {
+    margin-right: 5px;
+    float: left;
+}
+
+#race ul {
+    text-align: left;
+    list-style-type: none;
+ }
+
+ #race ul li {
+    margin-bottom: 5px;
+    font-size: 25px;
+ }
+
+#race input {
+    margin-right: 5px;
+    float: left;
+}
+
+
+#submit {
+    width: 250px;
+}
+
+#notes {
+    width: 100px;
+    height: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .labelbox, .labelbox2, .labelbox3,.labelboxTest {
+        /*display: block;*/
+        
+        width: 400px;
+        text-align: center;
+    }
+
+    input {
+        display: block;
+        margin: auto;
+    }
+
+    .labelboxTest {
+        height: 330px;
+    }
+
+    #vaccForm, #vaccForm2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-top: 50px;
+        margin-bottom: 25px;
+        float: none;
+
+    }
+
+    _:-ms-lang(x), _:-webkit-full-screen, #vaccForm {
+        min-width: 300px;
+    }
+    
+    _:-ms-lang(x), _:-webkit-full-screen, #vaccForm2 {
+        min-width: 300px;
+    }
+
+    _:-ms-lang(x), _:-webkit-full-screen, .labelbox, .labelbox2, .labelbox3,.labelboxTest {
+        width: 285px;
+    }
+
+    
+    @supports (-moz-appearance:none) {
+        #vaccForm{
+            min-width: 365px;
+        }
+
+        #vaccForm2 {
+            min-width: 365px;
+        }
+    
+        .labelbox, .labelbox2, .labelbox3,.labelboxTest {
+            /*display: block;*/
+            width: 355px;
+            text-align: center;
+        }
+}}
+

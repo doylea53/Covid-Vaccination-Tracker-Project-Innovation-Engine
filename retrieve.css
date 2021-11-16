@@ -1,0 +1,83 @@
+
+body {
+    margin-top: 10px;
+    background-image: url("background.jpg");
+}
+
+nav {
+    background-color: lightgray;
+    overflow: auto;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+}
+
+li a:hover {
+    background-color: grey;
+  }
+
+#patientInfo {
+    font-size: 25px;
+    width: 40%;
+    min-width: 400px;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    background-color: lightgray;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+#patientInfo button {
+    margin: 10px;
+    padding: 18px;
+    font-size: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+@supports (-moz-appearance:none) {
+    #choiceDiv {
+        min-width: 375px;
+    }
+
+    #faqDiv {
+        min-width: 375px;
+    }
+    
+}
+
+
+_:-ms-lang(x), _:-webkit-full-screen, #choiceDiv {
+    min-width: 310px;
+}
+
+_:-ms-lang(x), _:-webkit-full-screen, #faqDiv {
+    min-width: 310px;
+}
