@@ -1,4 +1,6 @@
 
+/* CSS code written by Dan Bartels */
+
 body {
     margin-top: 10px;
     background-image: url("background.jpg");
@@ -35,62 +37,70 @@ li a:hover {
     background-color: grey;
   }
 
-#patientInfo {
-    font-size: 25px;
+#choiceDiv {
+    display: block;
     width: 40%;
     min-width: 400px;
-    margin: auto;
-    text-align: center;
-    margin-top: 50px;
     background-color: lightgray;
-    border-radius: 25px;
+    margin: auto;
+    margin-top: 50px;
     padding: 15px;
+    text-align: center;
+    border-radius: 25px;
+
+ 
 }
 
-#patientInfo p {
+#choiceDiv p {
     font-size: 30px;
-    
 }
 
-button {
+#choiceDiv button {
     margin: 10px;
     padding: 18px;
     font-size: 20px;
-
+    width: 250px;
 }
 
-#patientInfo label {
-    margin-bottom: 10px;
-}
-
-#patientInfo input {
-    margin-bottom: 10px;
-    height: 20px;
-    
-}
-
-
-#retrieved {
-    visibility: hidden;
-    font-size: 25px;
+#faqDiv {
+    display: block;
     width: 40%;
     min-width: 400px;
-    margin: auto;
-    text-align: center;
-    margin-top: 50px;
+    font-size: 25px;
     background-color: lightgray;
-    border-radius: 25px;
+    margin: auto;
+    margin-top: 50px;
     padding: 15px;
+    text-align: center;
+    border-radius: 25px;
 }
 
+#faqDiv p {
+    font-size: 30px;
+}
 
+#faqDiv dt {
+    text-align: left;
+    margin: 10px;
+    font-weight: bold;
+}
 
+#faqDiv dd {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
 
+.qFirstLetter {
+    font-size: 50px;
+    color: red;
+    margin-right: 10px;
+}
 
-
-
-
-
+.aFirstLetter {
+    font-size: 50px;
+    color: #0000FF;
+    margin-right: 10px;
+}
 
 @supports (-moz-appearance:none) {
     #choiceDiv {
