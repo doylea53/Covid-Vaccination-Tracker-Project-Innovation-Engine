@@ -8,9 +8,12 @@
     <title>Log in</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='https://pro.fontawesome.com/releases/v5.12.0/css/all.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css'>
 
     <!-- HTML and Javascript code written by Dan Bartels -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+	<script src="jquery.js"></script>
 </head>
 
 <body>
@@ -28,49 +31,18 @@
 
             <label for="passwordLogin">Password:</label>
             <input type="password" name="Password" id="Password" required><br>
-            <button name="submit" onclick="return login()">Submit</button>
-            <button type="button" onclick="mainPage()">Main page</button>
-            <button type="button" onclick="inputPage()">input page</button>
+            <button name="submit" id="loginButton" onclick="return login()">Submit</button>
             <!-- Calls the submitLogin function -->
 
         </form>
     </div>
     <script>
-        function mainPage() {
-            document.location = "main.php";
-        }
-
-        function inputPage() {
-            document.location = "input.html";
-        }
         function login() {
             const username = document.getElementById('Username').value;
             const password = document.getElementById('Password').value;
-            // alert(username);
-            // alert(password);
-
-
-            /* NON-JQUERY */
-            // const formData = new FormData();
-            // formData.append('Username', username);
-            // formData.append('Password', password);
-
-            // fetch('checkuser.php', {
-            //     method: 'POST',
-            //     body: formData
-            // })
-            //     .then(response => response.text())
-            //     .then(result => {
-            //         // console.log('Success:', result);
-            //         if (result == '1') {
-            //             window.location = 'main.php';
-            //         } else {
-            //             alert('Invalid credentials!!!!!!!!!!');
-            //         }
-            //     });
-
-            /* JQUERY */
-            $.post("checkuser.php", $("#loginForm").serialize(), function (data) {
+            
+            /*check if the user is in the database*/
+            $.post("checkuser.php", $("#loginForm").serialize(), function (data) {              
                 console.log(data);
                 if (data == '1') {
                     document.getElementById("Username").style.backgroundColor="";

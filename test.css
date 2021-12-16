@@ -8,11 +8,12 @@ body {
 }
 
 #success {
-    
+    background-image: url(triangular.png);
+    box-shadow: 10px 10px 15px;
     display: block;
     width: 40%;
     min-width: 400px;
-    background-color: lightgray;
+    /*background-color: lightgray;*/
     margin: auto;
     margin-top: 50px;
     padding: 15px;

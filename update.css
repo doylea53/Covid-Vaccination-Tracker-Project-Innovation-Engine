@@ -41,7 +41,9 @@ li a:hover {
 
 /* Styles the div used for the form. Also centers content, though may choose to have it center at a different css point */
 #vaccForm {
-    background-color: lightgray;
+    background-image: url(triangular.png);
+    box-shadow: 10px 10px 15px;
+    /*background-color: lightgray;*/
     font-size: 25px;
     width: 40%;
     min-width: 425px;
@@ -78,7 +80,9 @@ li a:hover {
 
 /* Test for second form */
 #vaccForm2 {
-    background-color: lightgray;
+    background-image: url(triangular.png);
+    box-shadow: 10px 10px 15px;
+    /*background-color: lightgray;*/
     font-size: 25px;
     width: 40%;
     min-width: 425px;
@@ -121,7 +125,7 @@ textarea {
     width: 225px;
     height: 80px;
     margin: 5px;
-    background-color: #C0C0C0;
+    background-color: 	#DCDCDC;
     padding: 3px;
     border-radius: 25px;
     text-align: center;
@@ -134,7 +138,7 @@ textarea {
     width: 300px;
     height: 80px;
     margin: 5px;
-    background-color: #C0C0C0;
+    background-color: 	#DCDCDC;
     padding: 3px;
     border-radius: 25px;
     text-align: center;
@@ -151,7 +155,7 @@ textarea {
     width: 400px;
     height: 120px;
     margin: 5px;
-    background-color: #C0C0C0;
+    background-color: 	#DCDCDC;
     padding: 3px;
     border-radius: 25px;
     vertical-align: top;
@@ -163,7 +167,7 @@ textarea {
     width: 300px;
     height: 275px;
     margin: 5px;
-    background-color: #C0C0C0;
+    background-color: 	#DCDCDC;
     padding: 3px;
     border-radius: 25px;
     vertical-align: top;
@@ -224,6 +228,8 @@ textarea {
     width: 80%;
     background-color: #FFCCCC;
 }
+
+
 
 @media screen and (max-width: 1200px) {
     .labelbox, .labelbox2, .labelbox3,.labelboxTest {
